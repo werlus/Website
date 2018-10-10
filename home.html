@@ -1,46 +1,49 @@
 <!DOCTYPE html>
+<!-- 
+10.09.18
+Corrected placement of title/head tags - title goes in head with meta data
+Changed font family to Montserrat, helvetica for degrade
+Fixed header section spacing - forget to do 5px vs. 5 px
+Figured out radio buttons - added some for games
+Need to relearn scaling / responsive design principles
+ -->
 <html>
-	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
-	<style>
-		
-		<!--I'm not really sure what to do here yet.
-		nav {
-			height: 40px;
-			background: gray;
-		}
-		-->
-		
-		header, body {
-			font-family: helvetica;
-		}
-		
-		#header-card {
-			border: solid 2px;
-			border-radius: 5px;
-			margin: 10 px;
-			padding: 5px;
-			alight-text: left;
-		}
-		
-		#main-card {
-			border: solid 2px;
-			border-radius: 5px;
-			padding: 5px;
-			min-width: 500px; <!--This isn't working -->
-		}
-	</style>
-	
-	<header>
-		<div id="header-card">
-		
+	<head>		
+		<link href="https://fonts.google.com/specimen/Montserrat" rel="stylesheet" type="text/css">		
 		<title>Justin Saranovic</title>
-		
-		<p><strong>Justin Saranovic</strong></p>
+		<style>				
+			header, body {
+				font-family: Montserrat, helvetica;
+			}
+			
+			html {
+				background-color: #3D3D45;
+			}
+			
+			#header-card {
+				max-width: 500px;
+				background-color: white;
+				border-radius: 5px;
+				margin-bottom: 5px;
+				padding: 5px;
+				alight-text: left;
+			}
+			
+			#main-card {
+				max-width: 500px;
+				background-color: white;
+				border-radius: 5px;
+				padding: 5px;
+			}
+			
+		</style>
+	</head>
+	
+	<header id="header-card">
+		<p>Justin Saranovic</p>
 		
 		<nav>
 		</nav>
-		
-		</div>
 	</header>
 	
 	<body>
@@ -55,11 +58,19 @@
 					<input type="text" placeholder="Thoughts on dab?" required>
 					<button type="submit">Submit that good good info</button>
 				</form>
-				<!-- I'm not sure how to make a radio button yet.
-				<label>
-					<input type="radio" for= ">
+
+				<label for="Metroid">
+					<input id="Metroid" type="radio" name="video-games" checked>Metroid
 				</label>
-				-->
+				
+				<label for="Halo">
+					<input id="Halo" type="radio" name="video-games">Halo
+				</label>
+				
+				<label for="The Witcher 3">
+					<input id="The Witcher 3" type="radio" name="video-games">The Witcher 3
+				</label>
+
 				<ol>
 					<li>One</li>
 					<li>Two</li>
