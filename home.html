@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <!-- 
 10.09.18
-Corrected placement of title/head tags - title goes in head with meta data
-Changed font family to Montserrat, helvetica for degrade
-Fixed header section spacing - forget to do 5px vs. 5 px
-Figured out radio buttons - added some for games
-Need to relearn scaling / responsive design principles
+Learned how to get elements to align center via margin: auto
+Got some weird issues with ol at bottom (numbers at side)
+Realized how useful id's are for styling certain elements
  -->
 <html>
 	<head>		
 		<link href="https://fonts.google.com/specimen/Montserrat" rel="stylesheet" type="text/css">		
 		<title>Justin Saranovic</title>
 		<style>				
+	
 			header, body {
 				font-family: Montserrat, helvetica;
 			}
@@ -21,26 +20,34 @@ Need to relearn scaling / responsive design principles
 			}
 			
 			#header-card {
+				text-align: center;
 				max-width: 500px;
 				background-color: white;
 				border-radius: 5px;
+				margin: auto;
 				margin-bottom: 5px;
 				padding: 5px;
-				alight-text: left;
 			}
 			
 			#main-card {
+				margin: auto;
 				max-width: 500px;
+				text-align: center;
 				background-color: white;
 				border-radius: 5px;
 				padding: 5px;
+			}
+			
+			#griffy-dab {
+				padding: 5px;
+				min-width: 450px;
 			}
 			
 		</style>
 	</head>
 	
 	<header id="header-card">
-		<p>Justin Saranovic</p>
+		<h1>Justin Saranovic</h1>
 		
 		<nav>
 		</nav>
@@ -50,7 +57,7 @@ Need to relearn scaling / responsive design principles
 		<div id="main-card">
 			<section id="dab">
 				<p>E pluribus dab on em.</p>
-				<img src="https://media.giphy.com/media/3oKIPbiFwGNvFC5tde/giphy.gif" alt="Griffin dabbing on them.">
+				<img id="griffy-dab" src="https://media.giphy.com/media/3oKIPbiFwGNvFC5tde/giphy.gif" alt="Griffin dabbing on them.">
 			</section>
 		
 			<section id="info-and-submits">
@@ -58,7 +65,8 @@ Need to relearn scaling / responsive design principles
 					<input type="text" placeholder="Thoughts on dab?" required>
 					<button type="submit">Submit that good good info</button>
 				</form>
-
+				<!-- Weird stuff going on with the numbers - why do they stay
+				on the left side?
 				<label for="Metroid">
 					<input id="Metroid" type="radio" name="video-games" checked>Metroid
 				</label>
@@ -76,8 +84,12 @@ Need to relearn scaling / responsive design principles
 					<li>Two</li>
 					<li>Three</li>
 				</ol>
+				-->
 			</section>
 		</div>
+		<footer>
+			
+		</footer>
 	</body>
 	
 </html>
